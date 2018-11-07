@@ -1,0 +1,30 @@
+﻿@model Clase12.ViewModels.NewMovieViewModel
+@{
+    ViewBag.Title = "Nueva";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista Peliculas</h2>
+
+
+
+@using (Html.BeginForm("Create", "Movies"))
+{
+    <div class=" form-group">
+        @Html.LabelFor(m => m.Movie.Nombre)
+        @Html.TextBoxFor(m => m.Movie.Nombre, new { @class = "form-control" })
+
+    </div>
+
+   
+
+
+
+
+
+
+    <button type="submit" class="btn btn-primary">GUARDAR</button>
+
+}
+
+

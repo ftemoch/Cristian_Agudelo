@@ -19,15 +19,9 @@ namespace Clase12.Models
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
-    {
+    {   
         public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Movie>Movies{ get; set; }
-        public DbSet<TipoCliente> TipoClientes { get; set; }
-
-        public DbSet<Genero> Generos { get; set; }
-
-        public object Genero { get; internal set; }
-
+        public DbSet<Cliente> tipoClientes { get; set; }
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

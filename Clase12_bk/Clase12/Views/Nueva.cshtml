@@ -1,0 +1,15 @@
+﻿@model Clase12.ViewModels.NewClienteViewModel
+@{
+    ViewBag.Title = "Nueva";
+}
+
+<h2>Nueva</h2>
+@using (Html.BeginForm("Create", "Clientes"))
+{
+<div class="form-group">
+    @Html.LabelFor(m => m.Cliente.Nombre);
+    @Html.LabelFor(m => m.Cliente.Nombre, new { class = "form.control"})
+</div>
+}
+
+
